@@ -1,14 +1,19 @@
 
 const button = document.querySelector("#rolldie")
 const result = document.querySelector("#die1")
+const diebox = document.querySelector("#diebox")
 
 const roll = (num) => {
     return Math.floor(Math.random() * num) + 1 
 }
 
 button.addEventListener("click", function () {
+    diebox.classList.toggle("animationshake")
     let dieValue = document.querySelector("#diesides").value
-    die1.innerHTML = roll(dieValue)
+    setTimeout(function () {
+        die1.innerHTML = roll(dieValue)
+        diebox.classList.toggle("animationshake")
+    },700)
 })
 
 

@@ -11,6 +11,7 @@ body {
 
 h1 {
     margin-bottom: 40px;
+
 }
 
 input {
@@ -28,7 +29,12 @@ button {
     font-weight: bold;
     background-color: rgba(137, 43, 226, 0.503);
     border-radius: 5px;
+    cursor: pointer;
 }
+
+/* button:hover {
+    cursor: pointer;
+} */
 
 #diebox {
     border: 2px solid black;
@@ -39,6 +45,20 @@ button {
     margin: auto;
     margin-top: 20px;
     display: flex;
+    position: relative;
+
+}
+
+.animationshake {
+    animation: shake 200ms 1
+}
+
+@keyframes shake {
+    0%  {left: 0px}
+    25% {left: 10px; transform: rotate(-5deg)}
+    50% {left: 0px; transform: rotate(0deg)}
+    75% {left: 10px; transform: rotate(5deg)} 
+    100% {left: 0px; transform: rotate(0deg)} 
 }
 
 #die1 {
